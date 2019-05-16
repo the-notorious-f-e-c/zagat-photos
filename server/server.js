@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/photos', (req, res) => {
-  db.Photo.find({ restuarantId: req.body.id }, (err, urls) => {
+  db.getPhotos(req.body.id, (err, urls) => {
     if (err) {
       res.status(404).send();
     } else {

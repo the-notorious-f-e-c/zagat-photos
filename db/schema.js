@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const faker = require('faker');
-const { imageUrls, restaurantNames } = require('./data.js');
+const { generate100Records } = require('./dataGenerator.js');
 
 mongoose.connect('mongodb://localhost/restaurantphotos');
 
@@ -14,28 +13,10 @@ const photoSchema = new Schema({
 photoSchema.index({ restaurantId: 1 });
 
 const Photo = mongoose.model('Photo', photoSchema);
-
-const generateNums = (n) => {
-  const numbers = [];
-  for (let i = 0; i < n; i += 1) {
-    numbers.push(i);
-  }
-  return numbers;
+const records = generate100Records();
+const getPhotos = (id, callback) => {
+  Photo.findOne({ restaurantId: id }, callback);
 };
-
-const records = [];
-for (let i = 0; i < 100; i += 1) {
-  const n = faker.random.number({ min: 10, max: 15 });
-  let arr = generateNums(30);
-  faker.helpers.shuffle(arr);
-  arr = arr.slice(0, n).map(num => imageUrls[num]);
-
-  records.push({
-    restaurantId: i,
-    name: faker.random.arrayElement(restaurantNames),
-    photos: arr,
-  });
-}
 
 Photo.insertMany(records, (err) => {
   if (err) {
@@ -46,4 +27,4 @@ Photo.insertMany(records, (err) => {
   }
 });
 
-module.exports.Photo = Photo;
+module.exports.getPhotos = getPhotos;
