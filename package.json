@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --watch",
-    "start": "node db/schema.js"
+    "start": "node db/schema.js",
+    "server-dev": "node server/server.js"
   },
   "lint-staged": {
     "*.js": "eslint",
