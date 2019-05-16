@@ -45,3 +45,5 @@ Photo.insertMany(records, (err) => {
     mongoose.connection.close();
   }
 });
+
+module.exports.Photo = Photo;
