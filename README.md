@@ -1,39 +1,43 @@
 # Project Name
 
-> Photos module for Zagat.com
+> Photos and Modal module for The Nuggets, a restaurant discovery app
 
-## Related Projects
-
-  - https://github.com/the-notorious-f-e-c/zagat-reviews
-  - https://github.com/the-notorious-f-e-c/zagat-restaurant-info
-  - https://github.com/the-notorious-f-e-c/zagat-google-reviews
+![](nuggets-demo.gif)
 
 ## Table of Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+1. [How To Use](#how-to-use)
+2. [Requirements](#requirements)
+3. [Related Projects](#related-projects)
 
-## Usage
+## How To Use
 
-> npm run seed to seed database (initial)
-> npm run build to compile jsx files to one bundle
-> npm run start 
+```bash
+# clone this repository
+$ git clone https://github.com/the-nuggets/photos-and-modal.git
+
+# install dependencies
+$ npm install
+
+# seed database
+$ npm run seed
+
+# compile/transpile files with webpack
+$ npm run build
+
+# run the app!
+$ npm run start
+```
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+- [npm](http://npmjs.com)
+- [Node.js](https://nodejs.org/en/download/)
+- [Git](https://git-scm.com)
 
-- Node 6.13.0
-- etc
+## Related Projects
 
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+  - https://github.com/the-nuggets/search-bar
+  - https://github.com/the-nuggets/restaurant-reviews
+  - https://github.com/the-nuggets/restaurant-info
+  - https://github.com/the-nuggets/google-reviews
