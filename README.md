@@ -1,7 +1,7 @@
-# Project Name
+# Photos & Modal module
 
 > Photos and Modal module for The Nuggets, a restaurant discovery app
-
+<br />
 <p align='center'>
     <img src="hd-demo.gif?raw=true" width="800px" align="center"/>
 </p> 
