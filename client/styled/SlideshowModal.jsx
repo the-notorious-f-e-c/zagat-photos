@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 export const SlideshowViewIndex = styled.span`
   font: 15px/24px 'Calibre-Regular', sans-serif;
